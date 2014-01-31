@@ -1,5 +1,4 @@
 <?php
-echo "$user_event";
  $tab_result = mysqli_query($connect,"SELECT * FROM $user_event ") or die("error");
 echo "<table class='table zebra-striped' style='background-color:#FFFFE0'><thead><tr style='background-color:#BDB76B;color:#ffffff;'><th>NAME</th><th style='width:600px;background-color:grey;'><center>WRITE-UP</center></th></tr></thead>";
 $count=0;

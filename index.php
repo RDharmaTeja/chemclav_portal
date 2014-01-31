@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      header("location: core.php");
  }
 
-  if($count2 == 1) // User not found. So, redirect to login_form again.
+  if($count2 != 0) // User not found. So, redirect to login_form again.
   {
 
      session_register("myusername");

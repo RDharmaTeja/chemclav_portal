@@ -65,7 +65,7 @@ position: absolute;
   <li class="<? if($_GET['action']=='events'||$_GET['action']=='') echo "active";?>"><a href="core.php?action=events">Events/Cords</a></li>
   <!--<li class="<? //if($_GET['action']=='coordinators') echo "active";?>" ><a href="core.php?action=coordinators">Coordinators</a></li>-->
   <li class="<? if($_GET['action']=='add_event') echo "active";?>"><a href="core.php?action=add_event">Add Events/Cord</a></li>
-  <li class="<? if($_GET['action']=='writeups') echo "active";?>"><a href="#">Writeups</a></li>
+  <li class="<? if($_GET['action']=='writeups') echo "active";?>"><a href="core.php?action=writeups">Writeups</a></li>
 </ul></div>
 
 <div class="box">
@@ -80,6 +80,12 @@ position: absolute;
    include("includes/cong.php"); 
    //include("includes/user_event.php");
    include("includes/add_event_cord.php");
+
+   }
+   if($_GET['action']=='writeups'){
+   include("includes/cong.php"); 
+   //include("includes/user_event.php");
+   include("includes/writeups.php");
 
    }
 

@@ -64,6 +64,7 @@ position: absolute;
   <li class="<? if($_GET['action']=='edit') echo "active";?>"><a href="coordinator.php?action=edit">Edit Tabs</a></li>
   <li class="<? if($_GET['action']=='upload') echo "active";?>"><a href="coordinator.php?action=upload">Upload Files</a></li>
   <li class="<? if($_GET['action']=='preview') echo "active";?>"><a href="coordinator.php?action=preview">Preview</a></li>
+  <li class="<? if($_GET['action']=='writeups') echo "active";?>"><a href="coordinator.php?action=writeups">All Events Writeups</a></li>  
   <li class="<? if($_GET['action']=='tdp') echo "active";?>"><a href="coordinator.php?action=tdp">TDP</a></li>				
 </ul>
 </div>
@@ -108,6 +109,10 @@ position: absolute;
    }
      if($_GET['action']=='tdp'){
    echo "<center><i>NO TDPs AVAILABLE</i></center>";
+  //$GLOBALS['i']++;
+ }
+     if($_GET['action']=='writeups'){
+   include("includes/writeups.php");
   //$GLOBALS['i']++;
  }
 

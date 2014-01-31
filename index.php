@@ -17,8 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$username=$_POST['username'];
 	$password=$_POST['password'];
 
-  $clean_username = strip_tags(stripslashes(mysql_real_escape_string($username)));
-  $clean_pass = strip_tags(stripslashes(mysql_real_escape_string($password)));
+  $clean_username = strip_tags(mysql_real_escape_string($username));
+  $clean_pass = strip_tags(mysql_real_escape_string($password));
   
   $sql1="SELECT * FROM cores WHERE username='$clean_username' and password='$clean_pass'";
   $sql2="SELECT * FROM coordinators WHERE username='$clean_username' and password='$clean_pass'";

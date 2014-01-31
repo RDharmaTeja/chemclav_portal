@@ -70,27 +70,29 @@ position: absolute;
 
 <div class="box">
 
+
 	<?
-  //$GLOBALS['i']=0;
+   include("includes/cong.php");
+  include("includes/user_event.php");
+ $user_event=$_SESSION['cord_event'];
+ echo "<center><h3>$user_event</h3></center>";
+//$GLOBALS['i']=0;
 	//showing tabs
    if($_GET['action']=='show'){
-   include("includes/cong.php"); 
-   include("includes/user_event.php");
+
    include("includes/tabs.php");
   //$GLOBALS['i']++;
    }
 
 //adding tabs
    if($_GET['action']=='add'){
- include("includes/cong.php");
- include("includes/user_event.php"); 
+
  include("includes/add_tabs.php");
    //$GLOBALS['i']++;
    }
 //editing tabs
       if($_GET['action']=='edit'){
- include("includes/cong.php");
- include("includes/user_event.php"); 
+
  include("includes/edit_tabs.php");
  //$GLOBALS['i']++;
    }
@@ -100,8 +102,7 @@ position: absolute;
       //  $GLOBALS['i']++;
    }
       if($_GET['action']=='preview'){
- include("includes/cong.php");
- include("includes/user_event.php"); 
+ 
  include("includes/tabs.php");
     // $GLOBALS['i']++;
    }
@@ -109,11 +110,7 @@ position: absolute;
    echo "<center><i>NO TDPs AVAILABLE</i></center>";
   //$GLOBALS['i']++;
  }
-if ($_GET['action']=='event'||$_GET['action']=='') {
-  include("includes/cong.php");
-   include("includes/user_event.php");
-  echo "<center><h4>$user_event</h4></center>";
-}
+
 	?>
 
 
